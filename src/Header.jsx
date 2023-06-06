@@ -6,16 +6,18 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className="header">
+      <Link to="/" class="Voltar">
       <a href="#5" className="logo">
         <img src={logo} alt="MindfulLife" className="logo-image" />
       </a>
+      </Link>
       <nav className="nav">
         <ul className="nav-list">
-          <Link to="/" class="Home">
           <li className="nav-item">
+          <Link to="/" className="nav-link">
             <a href="#1" className="nav-link">Home</a>
+            </Link>
           </li>
-          </Link>
           <li className="nav-item">
             <a href="#2" className="nav-link">Finanças</a>
           </li>
@@ -34,9 +36,11 @@ const Header = () => {
         <button className="profile-button">
           <FaUser />
         </button>
+        <Link to="/Login/" class="logout">
         <button className="logout-button">
           <FaSignOutAlt />
         </button>
+        </Link>
       </div>
     </header>
   );

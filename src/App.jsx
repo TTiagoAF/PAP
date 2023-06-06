@@ -6,6 +6,9 @@ import HomePage from "./Home";
 import ContactPage from "./Contacto";
 import AboutPage from "./Sobre";
 import ResourcesPage from "./Recursos";
+import LoginPage from "./Login";
+import SignupPage from "./CriarConta";
+import EsqueciPass from "./ForgotPass";
 
 //É o que renderiza a página principal e a página de detalhes através do BrowserRouter 7
 const queryClient = new QueryClient({
@@ -25,6 +28,9 @@ const App = () => {
                     <header>
                         <div>
                             <Routes>
+                                <Route path="/Forgot/" element={<EsqueciPass />}/>
+                                <Route path="/CriarConta/" element={<SignupPage />}/>
+                                <Route path="/Login/" element={<LoginPage />}/>
                                 <Route path="/recursos/" element={<ResourcesPage />}/>
                                 <Route path="/sobre/" element={<AboutPage />}/>
                                 <Route path="/contacto/" element={<ContactPage />}/>
